@@ -1,0 +1,35 @@
+<span style="background-color: greenyellow">#include&lt;bits/stdc++.h&gt;</span></br>
+<span style="background-color: red">usingnamespacestd;</span></br>
+<span style="background-color: white">constintm=1e3+5;</span></br>
+<span style="background-color: greenyellow">intn,m;</span></br>
+<span style="background-color: white">vector&lt;int&gt;a[m],b[m];</span></br>
+<span style="background-color: yellow">int32_tmain()</span></br>
+<span style="background-color: write">{</span>
+<span style="background-color: white">	#ifndefonline_judge</span></br>
+<span style="background-color: white">	freopen("in.txt","r",stdin);</span></br>
+<span style="background-color: white">	freopen("out.txt","w",stdout);</span></br>
+<span style="background-color: white">	#endif</span></br>
+<span style="background-color: white">	cin&gt;&gt;n&gt;&gt;m;</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n;i++)</span></br>
+<span style="background-color: red">		for(intj=1;j&lt;=m;j++)</span></br>
+<span style="background-color: greenyellow">		{</span></br>
+<span style="background-color: white">			intx;		cin&gt;&gt;x;</span></br>
+<span style="background-color: white">			a[i+j].push_back(x);</span></br>
+<span style="background-color: greenyellow">		}</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n;i++)</span></br>
+<span style="background-color: red">		for(intj=1;j&lt;=m;j++)</span></br>
+<span style="background-color: greenyellow">		{</span></br>
+<span style="background-color: white">			intx;		cin&gt;&gt;x;</span></br>
+<span style="background-color: white">			b[i+j].push_back(x);</span></br>
+<span style="background-color: yellow">		}</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n+m;i++)</span></br>
+<span style="background-color: greenyellow">	{</span></br>
+<span style="background-color: white">		sort(a[i].begin(),a[i].end());</span></br>
+<span style="background-color: white">		sort(b[i].begin(),b[i].end());</span></br>
+<span style="background-color: yellow">		for(intj=0;j&lt;a[i].size();j++)</span></br>
+<span style="background-color: yellow">			if(a[i][j]!=b[i][j])</span></br>
+<span style="background-color: greenyellow">				returncout&lt;&lt;"no",0;</span></br>
+<span style="background-color: greenyellow">	}</span></br>
+<span style="background-color: yellow">	cout&lt;&lt;"yes";</span></br>
+<span style="background-color: yellow">	return0;</span></br>
+<span style="background-color: write">}</span>

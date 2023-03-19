@@ -1,0 +1,46 @@
+<span style="background-color: write">#include&lt;bits/stdc++.h&gt;</span></br>
+<span style="background-color: write">usingnamespacestd;</span></br>
+<span style="background-color: write">inta[505][505],b[505][505];</span></br>
+<span style="background-color: write">map&lt;int,multiset&lt;int&gt;&gt;aa,bb;</span></br>
+<span style="background-color: write">intmain(){</span></br>
+<span style="background-color: greenyellow">	</span></br>
+<span style="background-color: write">	</span></br>
+<span style="background-color: write">	intn,m;</span></br>
+<span style="background-color: write">	cin&gt;&gt;n&gt;&gt;m;</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n;i++){</span></br>
+<span style="background-color: yellow">		for(intj=1;j&lt;=m;j++){</span></br>
+<span style="background-color: greenyellow">			cin&gt;&gt;a[i][j];</span></br>
+<span style="background-color: write">			aa[i+j].insert(a[i][j]);</span></br>
+<span style="background-color: greenyellow">		}</span></br>
+<span style="background-color: greenyellow">	}</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n;i++){</span></br>
+<span style="background-color: yellow">		for(intj=1;j&lt;=m;j++){</span></br>
+<span style="background-color: write">			cin&gt;&gt;b[i][j];</span></br>
+<span style="background-color: write">			bb[i+j].insert(b[i][j]);</span></br>
+<span style="background-color: greenyellow">		}</span></br>
+<span style="background-color: greenyellow">	}</span></br>
+<span style="background-color: greenyellow">	boolflg=0;</span></br>
+<span style="background-color: write">	/*if(a[1][1]!=b[1][1]||a[n][m]!=b[n][m]){</span></br>
+<span style="background-color: write">		cout&lt;&lt;"no"&lt;&lt;endl;</span></br>
+<span style="background-color: write">		return0;</span></br>
+<span style="background-color: write">	}*/</span></br>
+<span style="background-color: greenyellow">	/*for(intj=2;j&lt;=m;j++){</span></br>
+<span style="background-color: greenyellow">		for(inti=1;i&lt;=j&&i&lt;=n;i++){</span></br>
+<span style="background-color: greenyellow">			</span></br>
+<span style="background-color: greenyellow">			</span></br>
+<span style="background-color: greenyellow">		}</span></br>
+<span style="background-color: greenyellow">	}</span></br>
+<span style="background-color: yellow">	for(inti=2;i&lt;=n-1;i++){</span></br>
+<span style="background-color: write">		for(intj=m;j&gt;=i-1&&j&gt;=1</span></br>
+<span style="background-color: write">		;j--){</span></br>
+<span style="background-color: greenyellow">			</span></br>
+<span style="background-color: greenyellow">			</span></br>
+<span style="background-color: greenyellow">		}</span></br>
+<span style="background-color: write">	}*/</span></br>
+<span style="background-color: greenyellow">	if(aa==bb){</span></br>
+<span style="background-color: write">		cout&lt;&lt;"yes"&lt;&lt;endl;</span></br>
+<span style="background-color: yellow">	}else{</span></br>
+<span style="background-color: write">		cout&lt;&lt;"no"&lt;&lt;endl;</span></br>
+<span style="background-color: greenyellow">	}</span></br>
+<span style="background-color: write">	return0;</span></br>
+<span style="background-color: write">}</span>

@@ -1,0 +1,81 @@
+<span style="background-color: white">#pragmagccoptimize("o3")</span></br>
+<span style="background-color: white">#pragmagccoptimize("expensive-optimizations")</span></br>
+<span style="background-color: white">#include&lt;bits/stdc++.h&gt;</span></br>
+<span style="background-color: white">usingnamespacestd;</span></br>
+<span style="background-color: white">#definempmake_pair</span></br>
+<span style="background-color: white">#definepbpush_back</span></br>
+<span style="background-color: white">#definefifirst</span></br>
+<span style="background-color: white">#definesesecond</span></br>
+<span style="background-color: white">typedefshortintsh;</span></br>
+<span style="background-color: white">typedefunsignedshortintush;</span></br>
+<span style="background-color: white">typedefunsignedintui;</span></br>
+<span style="background-color: white">typedeflonglongll;</span></br>
+<span style="background-color: white">typedefunsignedlonglongull;</span></br>
+<span style="background-color: white">typedeflongdoubleld;</span></br>
+<span style="background-color: white">constexprshinfs=3e4+7;</span></br>
+<span style="background-color: white">constexprintinf=1e9+7;</span></br>
+<span style="background-color: white">constexprllinfl=1e18+7;</span></br>
+<span style="background-color: white">intt[507][507];</span></br>
+<span style="background-color: white">intt2[507][507];</span></br>
+<span style="background-color: white">vector&lt;int&gt;w;</span></br>
+<span style="background-color: white">vector&lt;int&gt;w2;</span></br>
+<span style="background-color: white">intmain(){</span></br>
+<span style="background-color: white">	ios_base::sync_with_stdio(0);</span></br>
+<span style="background-color: white">	cin.tie(0);</span></br>
+<span style="background-color: white">	cout.tie(0);</span></br>
+<span style="background-color: white">	intn,m,x,y;</span></br>
+<span style="background-color: white">	cin&gt;&gt;n&gt;&gt;m;</span></br>
+<span style="background-color: white">	for(inti=1;i&lt;=n;i++)for(intj=1;j&lt;=m;j++)cin&gt;&gt;t[i][j];</span></br>
+<span style="background-color: white">	for(inti=1;i&lt;=n;i++)for(intj=1;j&lt;=m;j++)cin&gt;&gt;t2[i][j];</span></br>
+<span style="background-color: white">	</span></br>
+<span style="background-color: white">	for(inti=1;i&lt;=n;i++){</span></br>
+<span style="background-color: white">		w.clear();</span></br>
+<span style="background-color: white">		w2.clear();</span></br>
+<span style="background-color: white">		</span></br>
+<span style="background-color: white">		x=i;</span></br>
+<span style="background-color: white">		y=1;</span></br>
+<span style="background-color: white">		</span></br>
+<span style="background-color: white">		while(x&gt;=1){</span></br>
+<span style="background-color: white">			w.push_back(t[x][y]);</span></br>
+<span style="background-color: white">			w2.push_back(t2[x][y]);</span></br>
+<span style="background-color: white">			x--;</span></br>
+<span style="background-color: white">			y++;</span></br>
+<span style="background-color: white">		}</span></br>
+<span style="background-color: white">		</span></br>
+<span style="background-color: white">		sort(w.begin(),w.end());</span></br>
+<span style="background-color: white">		sort(w2.begin(),w2.end());</span></br>
+<span style="background-color: white">		for(intj=0;j&lt;w.size();j++){</span></br>
+<span style="background-color: white">			if(w[j]!=w2[j]){</span></br>
+<span style="background-color: white">				cout&lt;&lt;"no";</span></br>
+<span style="background-color: white">				return0;</span></br>
+<span style="background-color: white">			}</span></br>
+<span style="background-color: white">		}</span></br>
+<span style="background-color: white">	}</span></br>
+<span style="background-color: white">	</span></br>
+<span style="background-color: white">	for(inti=2;i&lt;=m;i++){</span></br>
+<span style="background-color: white">		w.clear();</span></br>
+<span style="background-color: white">		w2.clear();</span></br>
+<span style="background-color: white">		</span></br>
+<span style="background-color: white">		x=n;</span></br>
+<span style="background-color: white">		y=i;</span></br>
+<span style="background-color: white">		</span></br>
+<span style="background-color: white">		while(y&lt;=m){</span></br>
+<span style="background-color: white">			w.push_back(t[x][y]);</span></br>
+<span style="background-color: white">			w2.push_back(t2[x][y]);</span></br>
+<span style="background-color: white">			x--;</span></br>
+<span style="background-color: white">			y++;</span></br>
+<span style="background-color: white">		}</span></br>
+<span style="background-color: white">		</span></br>
+<span style="background-color: white">		sort(w.begin(),w.end());</span></br>
+<span style="background-color: white">		sort(w2.begin(),w2.end());</span></br>
+<span style="background-color: white">		for(intj=0;j&lt;w.size();j++){</span></br>
+<span style="background-color: white">			if(w[j]!=w2[j]){</span></br>
+<span style="background-color: white">				cout&lt;&lt;"no";</span></br>
+<span style="background-color: white">				return0;</span></br>
+<span style="background-color: white">			}</span></br>
+<span style="background-color: white">		}		</span></br>
+<span style="background-color: white">	}</span></br>
+<span style="background-color: white">	</span></br>
+<span style="background-color: white">	cout&lt;&lt;"yes";</span></br>
+<span style="background-color: white">	return0;</span></br>
+<span style="background-color: write">}</span>

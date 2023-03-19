@@ -1,0 +1,32 @@
+<span style="background-color: greenyellow">#include&lt;iostream&gt;</span></br>
+<span style="background-color: red">usingnamespacestd;</span></br>
+<span style="background-color: greenyellow">intmat[501][501],tran[501][501],n,m;</span></br>
+<span style="background-color: red">intmain(){</span></br>
+<span style="background-color: greenyellow">	cin&gt;&gt;n&gt;&gt;m;</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n;i++)</span></br>
+<span style="background-color: red">		for(intj=1;j&lt;=m;j++)</span></br>
+<span style="background-color: write">			cin&gt;&gt;mat[i][j];</span></br>
+<span style="background-color: write">	</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n;i++)</span></br>
+<span style="background-color: red">		for(intj=1;j&lt;=m;j++)</span></br>
+<span style="background-color: write">			cin&gt;&gt;tran[i][j];</span></br>
+<span style="background-color: red">	for(inti=1;i&lt;=n;i++){</span></br>
+<span style="background-color: greenyellow">		for(intj=1;j&lt;=m;j++){</span></br>
+<span style="background-color: greenyellow">			if(mat[i][j]!=tran[i][j]){</span></br>
+<span style="background-color: greenyellow">				for(intk=1;k&lt;j;k++){</span></br>
+<span style="background-color: write">					if(mat[i+k][j-k]==tran[i][j]){</span></br>
+<span style="background-color: write">						mat[i][j]+=mat[i+k][j-k];</span></br>
+<span style="background-color: write">						mat[i+k][j-k]=mat[i][j]-mat[i+k][j-k];</span></br>
+<span style="background-color: write">						mat[i][j]-=mat[i+k][j-k];</span></br>
+<span style="background-color: write">					}</span></br>
+<span style="background-color: write">				}</span></br>
+<span style="background-color: write">				if(mat[i][j]!=tran[i][j]){</span></br>
+<span style="background-color: write">					cout&lt;&lt;"no"&lt;&lt;endl;</span></br>
+<span style="background-color: yellow">					return0;</span></br>
+<span style="background-color: write">				}</span></br>
+<span style="background-color: write">			}</span></br>
+<span style="background-color: write">		}</span></br>
+<span style="background-color: greenyellow">	}</span></br>
+<span style="background-color: write">	cout&lt;&lt;"yes"&lt;&lt;endl;</span></br>
+<span style="background-color: write">	return0;</span></br>
+<span style="background-color: write">}</span>
